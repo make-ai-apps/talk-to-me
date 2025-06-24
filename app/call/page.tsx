@@ -43,7 +43,7 @@ const Call = async () => {
    
     stripeProducts?.forEach(product => {
         if (product.active) {
-            if(product.metadata?.project !== 'vicky') {
+            if(product.metadata?.project !== 'talk-to-me') {
                 return;
             }
             // Get product type from metadata (normal or afterDark)
