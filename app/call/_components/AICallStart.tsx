@@ -6,7 +6,7 @@ import {
     DropdownMenuTrigger
 } from "@/components/ui/dropdown-menu";
 import { createStripePortal } from "@/integrations/stripe/server";
-import bgImg from '@/public/images/vicky.jpeg';
+import bgImg from '@/public/bg-img.jpg';
 import { useConversation } from "@11labs/react";
 import { ChevronRight, Ellipsis } from "lucide-react";
 import { usePathname, useRouter } from "next/navigation";

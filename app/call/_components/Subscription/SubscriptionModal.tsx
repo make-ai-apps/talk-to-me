@@ -113,11 +113,16 @@ const SubscriptionModalContent: React.FC<SubscriptionModalProps> = ({
                 </button>
 
                 <div className="absolute w-full left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 px-[20px]">
+                    <TabSelector
+                        activeTab={activeTab}
+                        onTabChange={setActiveTab}
+                    />
+
                     <div className=" py-2 pt-2">
                         <div className="flex items-center mb-[8px]">
                             {activeTab === 'afterDark' && <Flame size={18} className="text-white/90 mr-1.5" />}
                             <h2 className="text-[20px] font-medium text-white">
-                                {activeTab === 'afterDark' ? `${App_Name} After Dark` : `Day ${App_Name}`}
+                            {activeTab === 'afterDark' ? `${App_Name} After Dark` : `Day ${App_Name}`}
                             </h2>
                         </div>
 

@@ -1,4 +1,4 @@
-import image from '@/public/images/vicky-phone.png';
+import image from '@/public/mobile.png';
 import CallButton from "./CallButton";
 import { DbPrice } from '../../../lib/db.sub-types';
 import { usePurchaseMoreCredits } from '../_hooks/usePurchaseMoreCredits';

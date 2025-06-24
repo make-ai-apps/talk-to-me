@@ -40,7 +40,7 @@ export function AgeGateModal() {
         <AlertDialogHeader>
           <div className="flex justify-between">
               <Image
-                src={"/images/vicky.jpeg"}
+                src={"/bg-img.jpg"}
                 alt="portrait image"
                 width={64}
                 height={64}
