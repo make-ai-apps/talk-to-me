@@ -1,0 +1,234 @@
+ /* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap'); */
+ @tailwind base;
+ @tailwind components;
+ @tailwind utilities;
+
+ html {
+   scroll-behavior: smooth;
+ }
+ @font-face {
+  font-family: 'SFProDisplayMedium';
+  src: url('fonts/SFProDisplayMedium.eot');
+  src: url('fonts/SFProDisplayMedium.eot') format('embedded-opentype'),
+       url('fonts/SFProDisplayMedium.woff2') format('woff2'),
+       url('fonts/SFProDisplayMedium.woff') format('woff'),
+       url('fonts/SFProDisplayMedium.ttf') format('truetype'),
+       url('fonts/SFProDisplayMedium.svg#SFProDisplayMedium') format('svg');
+}
+@font-face {
+  font-family: 'SFProDisplayRegular';
+  src: url('fonts/SFProDisplayRegular.eot');
+  src: url('fonts/SFProDisplayRegular.eot') format('embedded-opentype'),
+       url('fonts/SFProDisplayRegular.woff2') format('woff2'),
+       url('fonts/SFProDisplayRegular.woff') format('woff'),
+       url('fonts/SFProDisplayRegular.ttf') format('truetype'),
+       url('fonts/SFProDisplayRegular.svg#SFProDisplayRegular') format('svg');
+}
+
+
+
+ @layer base {
+   :root {
+     --background: 30 25% 20%;
+     --foreground: 220 10% 98%;
+
+     --card: 0 0% 100%;
+     --card-foreground: 222.2 84% 4.9%;
+
+     --popover: 0 0% 100%;
+     --popover-foreground: 222.2 84% 4.9%;
+
+     --primary: 355 85% 50%;
+     --primary-foreground: 210 40% 98%;
+
+     --secondary: 210 40% 96.1%;
+     --secondary-foreground: 222.2 47.4% 11.2%;
+
+     --muted: 210 40% 96.1%;
+     --muted-foreground: 215.4 16.3% 46.9%;
+
+     --accent: 210 40% 96.1%;
+     --accent-foreground: 222.2 47.4% 11.2%;
+
+     --destructive: 0 84.2% 60.2%;
+     --destructive-foreground: 210 40% 98%;
+
+     --border: 214.3 31.8% 91.4%;
+     --input: 214.3 31.8% 91.4%;
+     --ring: 222.2 84% 4.9%;
+
+     --radius: 0.5rem;
+   }
+
+   * {
+     @apply border-border;
+   }
+
+   html,
+   body {
+     /* @apply bg-background text-foreground font-['Inter', sans-serif] overflow-hidden; */
+     -webkit-font-smoothing: antialiased;
+     -moz-osx-font-smoothing: grayscale;
+     height: 100%;
+     max-height: 100vh;
+     font-family: 'SFProDisplayRegular';
+
+   }
+
+   #root {
+     height: 100%;
+     overflow: hidden;
+   }
+
+   /* Animation classes */
+   .fade-in {
+     animation: fadeIn 0.8s ease-in-out forwards;
+   }
+
+   .slide-up {
+     animation: slideUp 0.5s ease-out forwards;
+   }
+
+   .pulse {
+     animation: pulse 1.5s infinite;
+   }
+
+   .focus-visible\:ring-1:focus-visible {
+     box-shadow: none !important;
+   }
+
+   @keyframes fadeIn {
+     from {
+       opacity: 0;
+     }
+
+     to {
+       opacity: 1;
+     }
+   }
+
+   @keyframes slideUp {
+     from {
+       transform: translateY(20px);
+       opacity: 0;
+     }
+
+     to {
+       transform: translateY(0);
+       opacity: 1;
+     }
+   }
+
+   @keyframes pulse {
+     0% {
+       transform: scale(1);
+     }
+
+     50% {
+       transform: scale(1.05);
+     }
+
+     100% {
+       transform: scale(1);
+     }
+   }
+ }
+
+
+ #root {
+   width: 100%;
+   margin: 0 auto;
+   text-align: center;
+ }
+
+ .logo {
+   height: 6em;
+   padding: 1.5em;
+   will-change: filter;
+   transition: filter 300ms;
+ }
+
+ .logo:hover {
+   filter: drop-shadow(0 0 2em #646cffaa);
+ }
+
+ .logo.react:hover {
+   filter: drop-shadow(0 0 2em #61dafbaa);
+ }
+
+ @keyframes logo-spin {
+   from {
+     transform: rotate(0deg);
+   }
+
+   to {
+     transform: rotate(360deg);
+   }
+ }
+
+ @media (prefers-reduced-motion: no-preference) {
+   a:nth-of-type(2) .logo {
+     animation: logo-spin infinite 20s linear;
+   }
+ }
+
+ .card {
+   padding: 2em;
+ }
+
+ .read-the-docs {
+   color: #888;
+ }
+
+ /* Grid system for pixel-perfect design */
+ .grid-container {
+   display: grid;
+   grid-template-columns: repeat(12, 1fr);
+   grid-gap: 8px;
+   width: 100%;
+ }
+
+ /* Phone image and  text container */
+ .phone-container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 1rem;
+   margin: 0 auto;
+ }
+
+ .phone-image-wrapper {
+   width: 220px;
+   height: auto;
+   margin: 0 auto;
+   position: relative;
+   display: flex;
+   justify-content: center;
+ }
+
+ .call-donna-text {
+   font-size: 1.5rem;
+   font-weight: bold;
+   text-align: center;
+   margin-top: 1rem;
+   color: white;
+   width: 100%;
+ }
+
+ /* ElevenLabs ConvAI widget styling */
+ elevenlabs-convai {
+   position: absolute;
+   bottom: 20px;
+   right: 20px;
+   z-index: 1000;
+ }
+
+ [data-sonner-toast][data-styled="true"] {
+   background-color: rgba(50, 50, 50, 0.7);
+   color: #ffffff;
+   border-radius: 12px;
+   padding: 16px;
+   backdrop-filter: blur(8px);
+   border: 1px solid rgba(100, 100, 100, 0.3);
+ }
